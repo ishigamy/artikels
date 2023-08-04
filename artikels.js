@@ -26,6 +26,7 @@ berekenGemiddeldePrijs(artikels);
 function verzamelArtikels(naamPrompt, aankoopprijsPrompt, verkoopprijsPrompt) {
     const artikels = [];
     let naam = prompt(naamPrompt);
+
     while (naam !== 'stop') {
         artikels.push({
             naam,
@@ -39,6 +40,7 @@ function verzamelArtikels(naamPrompt, aankoopprijsPrompt, verkoopprijsPrompt) {
 
 // Functie om artikels te filteren op naam
 function filterArtikelsOpNaam(artikels, woord) {
+    artikels
         .filter(artikel => artikel.naam.includes(woord))
         .forEach(artikel => console.log(artikel.naam));
 }
